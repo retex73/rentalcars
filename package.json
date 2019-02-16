@@ -1,0 +1,25 @@
+{
+  "name": "rentalcars",
+  "version": "1.0.0",
+  "description": "rentalcars tech test",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server src",
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retex73/rentalcars.git"
+  },
+  "author": "Peter Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/retex73/rentalcars/issues"
+  },
+  "homepage": "https://github.com/retex73/rentalcars#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^3.1.5",
+    "http-server": "^0.11.1"
+  }
+}
