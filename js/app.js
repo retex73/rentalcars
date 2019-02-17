@@ -4,6 +4,10 @@ import UrlGenerator from "../js/url-generator.js"
 const setUrl = (params) => {
     return API + params
 }
+
+const clearResults = () => {
+    document.getElementById('results').innerHTML = ''
+}
 // Listen for keypress on input
 document.querySelector('input').addEventListener('keyup', e => {
     let params = {
@@ -12,14 +16,13 @@ document.querySelector('input').addEventListener('keyup', e => {
     }
     
     let endpoint = new UrlGenerator(API, params)
-    if(e.target.value.length > 1) {
-        getData(endpoint.url)
-    }
+    e.target.value.length > 1 ? getData(endpoint.url) : clearResults()
 })
 
 const appendToList = (row) => {
     const {name, region, city, country} = row
-    let template = `<li class="ui-menu-item" role="menuitem">
+    
+    let template = name === 'No results found' ? `<li class="ui-menu-item" role="menuitem">${name}</li>` : `<li class="ui-menu-item" role="menuitem">
                         <a class="ui-corner-all" tabindex="-1">
                         <span class="autocomplete__tag autocomplete__tag--city">${name}</span>
                         <div class="SearchForm_FtsSuggestion_LocationText_Wrapper">
@@ -35,6 +38,7 @@ const appendToList = (row) => {
 
 const populateList = data => {
     const {results} = data
+    clearResults()
     results.docs.map(doc=>appendToList(doc))
 }
 
