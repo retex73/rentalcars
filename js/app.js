@@ -11,17 +11,15 @@ const clearResults = () => {
 // Listen for keypress on input
 document.querySelector('input').addEventListener('keyup', e => {
     let params = {
-        pickupLocation: e.target.value, 
+        pickupLocation: e.target.value,
         numberResults: 6
     }
-    
     let endpoint = new UrlGenerator(API, params)
     e.target.value.length > 1 ? getData(endpoint.url) : clearResults()
 })
 
 const appendToList = (row) => {
     const {name, region, city, country} = row
-    
     let template = name === 'No results found' ? `<li class="ui-menu-item" role="menuitem">${name}</li>` : `<li class="ui-menu-item" role="menuitem">
                         <a class="ui-corner-all" tabindex="-1">
                         <span class="autocomplete__tag autocomplete__tag--city">${name}</span>
