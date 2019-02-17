@@ -34,8 +34,8 @@ describe('Search Widget', function(){
         cy.get(inputSelector).clear()
     })
     it('Removes results when input is manually deleted', function(){
-        cy.get(inputSelector).type('ma{backspace}{backspace}')
-        cy.get(inputSelector).trigger('keyup')
-        cy.get('#results').find('li').should('not.exist')
+        cy.get(inputSelector).type('ma{backspace}{backspace}').then(function(){
+            cy.get('li').should('not.exist')
+        })
     })
 })

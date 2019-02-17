@@ -13,3 +13,8 @@ The test uses pure HTML, JavaScript and Rentalcars own CSS and is not reliant on
 ## To run Cypress tests, from the parent directory type
 ``npm test``
 Wait for Cypress to load and select search_widget_spec 
+
+## Dependencies
+- axios (https://github.com/axios/axios)
+- Cypress (https://www.cypress.io/)
+- http-server (https://www.npmjs.com/package/http-server)
