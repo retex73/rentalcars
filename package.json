@@ -4,7 +4,7 @@
   "description": "rentalcars tech test",
   "main": "index.js",
   "scripts": {
-    "start": "http-server src",
+    "start": "http-server -c1 -p8010",
     "test": "cypress open"
   },
   "repository": {
@@ -17,7 +17,9 @@
     "url": "https://github.com/retex73/rentalcars/issues"
   },
   "homepage": "https://github.com/retex73/rentalcars#readme",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
   "devDependencies": {
     "cypress": "^3.1.5",
     "http-server": "^0.11.1"

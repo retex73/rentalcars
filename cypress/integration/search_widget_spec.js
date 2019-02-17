@@ -14,4 +14,5 @@ describe('Search Widget', function(){
     it('Should have aria for accessibility', function(){
         cy.get('input[name="ftsAutocomplete"]').should('have.attr', 'aria-required', 'true')
     })
+    
 })

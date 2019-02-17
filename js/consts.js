@@ -1,0 +1,1 @@
+export const API = 'https://cors.io/?https://www.rentalcars.com/FTSAutocomplete.do?solrIndex=fts_en'
