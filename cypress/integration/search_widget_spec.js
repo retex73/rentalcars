@@ -1,6 +1,5 @@
 const inputSelector = 'input[name="ftsAutocomplete"]'
 describe('Search Widget', function(){
-    
     it('Opens the rental cars homepage', function(){
         cy.visit('http://localhost:8010')
     })
@@ -36,7 +35,7 @@ describe('Search Widget', function(){
     })
     it('Removes results when input is manually deleted', function(){
         cy.get(inputSelector).type('ma{backspace}{backspace}')
-        // cy.get(inputSelector).type('{backspace}')
+        cy.get(inputSelector).trigger('keyup')
+        cy.get('#results').find('li').should('not.exist')
     })
-    
 })

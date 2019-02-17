@@ -15,6 +15,7 @@ document.querySelector('input').addEventListener('keyup', e => {
 })
 
 const appendToList = (row) => {
+    console.log('hello')
     const {name, region, city, country} = row
     let template = name === 'No results found' ? `<li class="ui-menu-item" role="menuitem">${name}</li>` : `<li class="ui-menu-item" role="menuitem">
                         <a class="ui-corner-all" tabindex="-1">
