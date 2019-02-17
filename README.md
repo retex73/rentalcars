@@ -1,6 +1,10 @@
 # rentalcars
 Rentalcars tech test
 
+![Screenshot](screenshot-main.png)
+
+
+
 To run, from parent directory type 
 ``npm install``
 ``npm start``
