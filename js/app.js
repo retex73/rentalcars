@@ -1,10 +1,6 @@
 import { API } from  "../js/consts.js"
 import UrlGenerator from "../js/url-generator.js"
 
-const setUrl = (params) => {
-    return API + params
-}
-
 const clearResults = () => {
     document.getElementById('results').innerHTML = ''
 }
